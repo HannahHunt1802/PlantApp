@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.signinpage {
+    font-family: 'Merge One, sans-serif';
+    background-color: #d7cab8;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.background {
+    background-color:#537759;
+    height:98vh;
+    width:98vw;
+    display:flex;
+    border-radius:50px;
+    position:relative;
+    padding:20px;
+}
+.background h1 {
+    color:#d7cab8;
+    vertical-align:text-top;
+    font-size:100px;
+    line-height:auto;
+    border-style:hidden;
+    outline:none;
+}
