@@ -19,12 +19,135 @@
     border-radius:50px;
     position:relative;
     padding:20px;
+    z-index:1;
 }
 .background h1 {
     color:#d7cab8;
-    vertical-align:text-top;
-    font-size:100px;
-    line-height:auto;
-    border-style:hidden;
-    outline:none;
+    font-size:110px;
+    font-weight:bold;
+    margin-left:30px;
+    -webkit-text-stroke: 2px #537759; /* adds width and colour to text */
+    z-index:3; /* indexed in order to put Welcome title in front of login box, when window is shrunk */
+}
+
+/* login page*/
+.login {
+    background-color:#D7CAB8;
+    height:80vh;
+    width:45vw;
+    top:15%;
+    right:5%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius:50px;
+    position:absolute;
+    padding:60px;
+    z-index:2;
+    animation: fadeIn 1s ease-out;
+}
+/* animation to fade in the login box */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+.login h1 {
+    color:#53785A;
+    font-size: 40px;
+    margin: 0;
+}
+.login h2 {
+    margin-top:20px;
+    color: #483924;
+    font-size: 15px;
+}
+
+/* Email/Password inputs */
+#form-container{
+    width:100%;
+    margin-top:50px;
+}
+#form-container form{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+#form-container label{
+    margin-bottom:5px;
+    color:#483924;
+}
+#form-container input{
+    background-color: #d8d4ce;
+    border-radius: 10px;
+    border:1px solid #a99a86;
+    padding-block: 10px;
+    padding-inline: 10px;
+}
+#email {
+    margin-bottom: 25px;
+}
+
+/*sign in button*/
+.sign-in-btn {
+    margin-top: 50px;
+    background-color: #354B74;
+    color: white;
+    border:1px solid #a99a86;
+}
+.sign-in-btn:hover {
+    background-color: #354B74;
+}
+
+/*or divider*/
+#or-divider{
+    display:flex;
+    align-items: center;
+    text-align:center;
+    margin-top:30px;
+    width:100%;
+}
+#or-divider::before, #or-divider::after{
+    content:'';
+    flex:1;
+    border-bottom:1px solid #483924;
+    margin: 0 10px;
+}
+
+/* google sign in button*/
+.google-btn {
+    background-color: white;
+    border: 1px solid #a99a86;
+    padding: 10px;
+    color: #483924;
+    cursor: pointer;
+    gap: 10px;
+    margin-top: 30px;
+}
+.google-btn:hover {
+    background-color: #f0efec;
+}
+.google-icon{
+    height: 24px;
+    width:24px;
+    margin: 5px;
+}
+.sign-in-btn,
+.google-btn {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:60px;
+    width:300px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: lighter;
+    font-family: 'Merge One, sans-serif';
+}
+/* Making buttons align centrally on login page*/
+.login .btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
