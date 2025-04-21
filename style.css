@@ -1,10 +1,21 @@
+/* ================================
+   1. General Styles
+====================================*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
+
+/* applying the same font globally */
+body {
+    font-family: 'Merge One', sans-serif;
+}
+
+/* ================================
+   2. Sign In Page
+====================================*/
 .signinpage {
-    font-family: 'Merge One, sans-serif';
     background-color: #d7cab8;
     height:100vh;
     display:flex;
@@ -50,7 +61,7 @@
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-  }
+}
 .login h1 {
     color:#53785A;
     font-size: 40px;
@@ -76,7 +87,7 @@
     margin-bottom:5px;
     color:#483924;
 }
-#form-container input{
+#form-container input {
     background-color: #d8d4ce;
     border-radius: 10px;
     border:1px solid #a99a86;
@@ -143,7 +154,6 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: lighter;
-    font-family: 'Merge One, sans-serif';
 }
 /* Making buttons align centrally on login page*/
 .login .btn-container{
@@ -151,3 +161,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+/* ================================
+   3. Home Page
+====================================*/
+/* (Rest of your Home Page styles remain the same) */
