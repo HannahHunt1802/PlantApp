@@ -11,26 +11,30 @@
         <div id="homepage" class="homepage">
             <div class="homepage-background">
                 <h1>Hello, User!</h1>
+                <button class="add-plant-btn">+ add plant</button>
                 <div class="tab-container">
-                    <a href="calendar.html" class="tab">Calendar</a>
-                    <a href="myplants.html" class="tab">My Plants</a>
-                    <a href="greenhouse.html" class="tab">Greenhouse</a>
-                    <a class="tab">Extra</a>
-                    <a class="tab">Extra</a>
-                    <a class="tab">Extra</a>
-                    <a class="tab">Extra</a>
+                    <a data-target="calendar-tab" class="tab">Calendar</a>
+                    <a data-target="myplants-tab" class="tab">My Plants</a>
+                    <a data-target="greenhouse-tab" class="tab">Greenhouse</a>
                     <button class="new-tab-button">+</button>
                 </div>
                 <!--date/time/weather-->
                 <div class="date-time-container">
-                    <h2 class="date">Monday, 21ˢᵗ April 2025</h1>
-                    <h1 class="time">18:30</h1>
-                    <h3 class="forecast">13°C, Sunny</h3>
+                    <h2 id="date" class="datetime">Monday, 21ˢᵗ April 2025</h1>
+                    <h1 id="time" class="datetime">18:30</h1>
+                    <h3 id="weather" class="forecast">13°C, Sunny</h3>
                     <div class="sun-container">
                         <img src="assets/Centre.png" alt="Sun Center" class="sun-center">
                         <img src="assets/Rays.png" alt="Rays" class="rays">
                     </div>
                 </div>
+                <!-- tab content-->
+                <div id="calendar-tab" class="tab-content">
+                    <p>This is the calendar.</p>
+                </div>
+                <div id="myplants-tab" class="tab-content"></div>
+                <div id="greenhouse-tab" class="tab-content"></div>
             </div>
         </div>
+        <script src="../js/script.js"></script>
     </body>
