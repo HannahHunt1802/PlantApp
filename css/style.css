@@ -167,16 +167,30 @@ body {
 .homepage-background{
     background-color:#D7CAB8;
     height:100vh;
-    display:flex;
     padding: 10px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .homepage-background h1{
     color:#1E692A;
     font-weight:bold;
     font-size:100px;
     padding:20px;
+}
+.homepage-background .add-plant-btn{
+    background-color: #D7CAB8;
+    color: #8C7656;
+    font-size: 40px;
+    border: none;
+    display:flex;
+    position: relative;
+    top:38%;
+    left:42%;
+    text-align: center;
+    height:60px;
+    width: 210px;
+    cursor: pointer;
 }
 
 .tab-container{
@@ -225,11 +239,12 @@ body {
 /* when hovering over the tab */
 .tab:hover {
     background-color:#1E692A;
-    height:60px;
+    height:50px;
     width:180px;
     box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
     z-index: 5;
-    margin-top:-20px; /*makes sure the tab pops up, not down.*/
+    margin-top:-10px; /*makes sure the tab pops up, not down.*/
+    cursor:pointer;
 }
 /* selected tab appears in front */
 .tab.active {
@@ -237,11 +252,10 @@ body {
     color: white;
     height:60px;
     width:180px;
-
-    transform: translateY(-12px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
     z-index: 10;
     margin-top: -20px;
+    cursor:pointer;
 }
 
 /*editting new tab button style*/
@@ -284,7 +298,7 @@ body {
 
 /* Date/Time/Weather section */
 .date-time-container{
-    position:absolute;
+    position:fixed;
     height:229px;
     width: 37%;
     background-color:#9AA6BB;
@@ -294,29 +308,28 @@ body {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     top:16px;
-    right: 12px; 
+    right: 12px;
     display:flex;
     flex-direction: column;
 }
 /*date-time-container text*/
-.date-time-container h2{
+.date-time-container #date{
     opacity:90%;
     color:#354B74;
     font-size: 35px;
     text-align: center;
 }
-.date-time-container h1{
+.date-time-container #time{
     color:#354B74;
     font-size: 70px;
     text-align: center;
 }
-.date-time-container h3{
+.date-time-container #weather{
     opacity:90%;
     color:#354B74;
     font-size: 25px;
     text-align: left;
 }
-
 
 /*for sun animation*/
 .sun-container{
@@ -344,4 +357,16 @@ body {
 @keyframes spin{
     0% {transform: translate(-50%, -50%) rotate(0deg)}
     100% {transform:translate(-50%, -50%) rotate(360deg)}
+}
+
+/* ================================
+   4. Tab Contents
+====================================*/
+
+.tab-content {
+    /*by default, tab contents are not displayed.*/
+    display: none;
+}
+.tab-content.active {
+  display: block;
 }
